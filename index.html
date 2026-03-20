@@ -1,0 +1,1040 @@
+<!doctype html>
+<!-- 1) Khai báo chuẩn HTML5: giúp trình duyệt dùng chế độ render tiêu chuẩn, tránh Quirks Mode (chế độ cũ dễ lệch layout) -->
+<html lang="vi">
+  <!-- 2) Phần tử gốc của tài liệu HTML; lang="vi" giúp SEO, screen reader, và trình dịch tự động nhận diện nội dung tiếng Việt chính xác -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 3) UTF-8: đảm bảo tiếng Việt có dấu hiển thị đúng, không lỗi ký tự (mojibake) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 4) Viewport cho thiết bị di động: width bám theo màn hình thật, initial-scale=1 để không tự zoom -->
+    <title>New Project</title>
+    <!-- 5) Tiêu đề tab trình duyệt, cũng là tên hiển thị khi bookmark/chia sẻ -->
+    <link rel="stylesheet" href="asset/css/base.css" />
+    <!-- 6) Nạp CSS nền trước: reset mặc định browser + thiết lập cơ sở toàn trang -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- 6.1) Nạp bộ icon Bootstrap Icons từ CDN -->
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <!-- 7) Nạp CSS chính sau: tận dụng cơ chế cascade để override base khi cần -->
+  </head>
+  <body>
+    <header class="shop-header">
+      <div class="container header-top">
+        <nav class="top-left" aria-label="Tiện ích người bán">
+          <a href="#">Kênh Người Bán</a>
+          <span>|</span>
+          <a href="#">Trở thành Người bán Shopee</a>
+          <span>|</span>
+          <div class="download-app">
+            <a href="#" class="download-app-link">Tải ứng dụng</a>
+            <div class="download-app-qr" aria-label="Mã QR tải ứng dụng">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://shopee.vn"
+                alt="Mã QR tải ứng dụng Shopee"
+              />
+              <div
+                class="download-app-stores"
+                aria-label="Nền tảng tải ứng dụng"
+              >
+                <a
+                  href="#"
+                  class="store-link store-link--appstore"
+                  aria-label="App Store"
+                >
+                  <i class="bi bi-apple"></i>
+                  <span>App Store</span>
+                </a>
+                <a
+                  href="#"
+                  class="store-link store-link--googleplay"
+                  aria-label="Google Play"
+                >
+                  <i class="bi bi-google-play"></i>
+                  <span>Google Play</span>
+                </a>
+                <a
+                  href="#"
+                  class="store-link store-link--appgallery"
+                  aria-label="AppGallery"
+                >
+                  <i class="bi bi-grid-3x3-gap-fill"></i>
+                  <span>AppGallery</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <span>|</span>
+          <a href="#">Kết nối</a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </nav>
+        <nav class="top-right" aria-label="Tiện ích tài khoản">
+          <div class="notify-menu">
+            <a href="#" class="notify-trigger"
+              ><i class="bi bi-bell"></i> Thông Báo</a
+            >
+            <div class="notify-panel" aria-label="Thông báo">
+              <div class="notify-content">
+                <div class="notify-hero" aria-hidden="true"></div>
+                <p>Đăng nhập để xem Thông báo</p>
+              </div>
+              <div class="notify-actions">
+                <a href="#">Đăng ký</a>
+                <a href="#">Đăng nhập</a>
+              </div>
+            </div>
+          </div>
+          <a href="#"><i class="bi bi-question-circle"></i> Hỗ Trợ</a>
+          <div class="lang-menu">
+            <a href="#" class="lang-switch"
+              ><i class="bi bi-globe"></i> Tiếng Việt
+              <i class="bi bi-chevron-down"></i
+            ></a>
+            <div class="lang-options" aria-label="Ngôn ngữ">
+              <a href="#" aria-current="true">Tiếng Việt</a>
+              <a href="#">English</a>
+              <a href="#">한국어</a>
+            </div>
+          </div>
+          <a href="#">Đăng Ký</a>
+          <span>|</span>
+          <a href="#">Đăng Nhập</a>
+        </nav>
+      </div>
+
+      <div class="container header-main">
+        <a href="#" class="brand" aria-label="Shopee">
+          <span class="brand-icon" aria-hidden="true">S</span>
+          <span class="brand-text">Shopee</span>
+        </a>
+
+        <div class="search-area">
+          <form
+            class="search-form"
+            action="#"
+            role="search"
+            aria-label="Tìm kiếm sản phẩm"
+          >
+            <input
+              type="text"
+              placeholder="Shopee bao ship 0Đ - Đăng ký ngay!"
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <nav class="hot-keywords" aria-label="Từ khóa nổi bật">
+            <a href="#">Săn iPhone 0 Đồng</a>
+            <a href="#">Đồ Ngủ Ở Nhà</a>
+            <a href="#">Bình Nước Giữ Nhiệt</a>
+            <a href="#">Áo Thun Hot Trend</a>
+            <a href="#">Kính Gương</a>
+            <a href="#">Tai Nghe Bluetooth</a>
+            <a href="#">Săn Sale 1k Điện Thoại</a>
+            <a href="#">Váy Đẹp</a>
+          </nav>
+        </div>
+
+        <a href="#" class="cart" aria-label="Giỏ hàng"
+          ><i class="bi bi-cart3"></i
+        ></a>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <section class="container home-hero" aria-label="Khu vực nổi bật">
+        <div class="hero-grid">
+          <section class="hero-slider" aria-label="Banner khuyến mãi tự động">
+            <div class="slider-track">
+              <img src="asset/img/slides/slider1.webp" alt="Slider 1" />
+              <img src="asset/img/slides/slider2.webp" alt="Slider 2" />
+              <img src="asset/img/slides/slider3.webp" alt="Slider 3" />
+              <img src="asset/img/slides/slider4.webp" alt="Slider 4" />
+              <img src="asset/img/slides/slider5.webp" alt="Slider 5" />
+              <img src="asset/img/slides/slider6.webp" alt="Slider 6" />
+              <img src="asset/img/slides/slider7.webp" alt="Slider 7" />
+            </div>
+            <button
+              class="slider-arrow prev"
+              type="button"
+              aria-label="Ảnh trước"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button
+              class="slider-arrow next"
+              type="button"
+              aria-label="Ảnh sau"
+            >
+              <i class="bi bi-chevron-right"></i>
+            </button>
+            <div
+              class="stardust-carousel__dots"
+              aria-label="Chọn ảnh slider"
+            ></div>
+          </section>
+
+          <aside class="hero-ads" aria-label="Quảng cáo bên phải">
+            <a href="#" class="ad-card"
+              ><img src="asset/img/adsone/ads22.webp" alt="Quảng cáo 1"
+            /></a>
+            <a href="#" class="ad-card"
+              ><img src="asset/img/adsone/ads2.webp" alt="Quảng cáo 2"
+            /></a>
+          </aside>
+        </div>
+
+        <nav class="hero-features" aria-label="Tiện ích nổi bật">
+          <a href="#" class="feature-item">
+            <span class="feature-icon"
+              ><img src="asset/img/feature-item/feature-item1.webp" alt="Deal"
+            /></span>
+            <span>Deal Từ 1.000Đ</span>
+          </a>
+          <a href="#" class="feature-item">
+            <span class="feature-icon"
+              ><img
+                src="asset/img/feature-item/feature-item2.webp"
+                alt="Shopee Xử Lý"
+            /></span>
+            <span>Shopee Xử Lý</span>
+          </a>
+          <a href="#" class="feature-item">
+            <span class="feature-icon"
+              ><img
+                src="asset/img/feature-item/feature-item3.webp"
+                alt="Shopee Style"
+            /></span>
+            <span>Shopee Style Voucher 30%</span>
+          </a>
+          <a href="#" class="feature-item">
+            <span class="feature-icon"
+              ><img
+                src="asset/img/feature-item/feature-item4.webp"
+                alt="Khách Hàng Thân Thiết"
+            /></span>
+            <span>Khách Hàng Thân Thiết</span>
+          </a>
+          <a href="#" class="feature-item">
+            <span class="feature-icon"
+              ><img
+                src="asset/img/feature-item/feature-item5.webp"
+                alt="Mã Giảm Giá"
+            /></span>
+            <span>Mã Giảm Giá</span>
+          </a>
+        </nav>
+      </section>
+
+      <section class="container category-section" aria-label="Danh mục">
+        <h2 class="category-title">DANH MỤC</h2>
+
+        <div class="category-carousel">
+          <button
+            class="category-arrow prev"
+            type="button"
+            aria-label="Danh mục trước"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div class="category-viewport">
+            <div class="category-track">
+              <div class="category-grid">
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card1.webp"
+                    alt="Thời Trang Nam"
+                  />
+                  <p>Thời Trang Nam</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card2.webp"
+                    alt="Điện Thoại & Phụ Kiện"
+                  />
+                  <p>Điện Thoại & Phụ Kiện</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card3.webp"
+                    alt="Thiết Bị Điện Tử"
+                  />
+                  <p>Thiết Bị Điện Tử</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card4.webp"
+                    alt="Máy Tính & Laptop"
+                  />
+                  <p>Máy Tính & Laptop</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card5.webp"
+                    alt="Máy Ảnh & Máy Quay Phim"
+                  />
+                  <p>Máy Ảnh & Máy Quay Phim</p>
+                </div>
+
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card6.webp"
+                    alt="Đồng Hồ"
+                  />
+                  <p>Đồng Hồ</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card7.webp"
+                    alt="Giày Dép Nam"
+                  />
+                  <p>Giày Dép Nam</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card8.webp"
+                    alt="Thiết Bị Điện Gia Dụng"
+                  />
+                  <p>Thiết Bị Điện Gia Dụng</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card9.webp"
+                    alt="Thể Thao & Du Lịch"
+                  />
+                  <p>Thể Thao & Du Lịch</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card10.webp"
+                    alt="Ô Tô & Xe Máy & Xe Đạp"
+                  />
+                  <p>Ô Tô & Xe Máy & Xe Đạp</p>
+                </div>
+
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card11.webp"
+                    alt="Thời Trang Nữ"
+                  />
+                  <p>Thời Trang Nữ</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card12.webp"
+                    alt="Mẹ & Bé"
+                  />
+                  <p>Mẹ & Bé</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card13.webp"
+                    alt="Nhà Cửa & Đời Sống"
+                  />
+                  <p>Nhà Cửa & Đời Sống</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card14.webp"
+                    alt="Sắc Đẹp"
+                  />
+                  <p>Sắc Đẹp</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card15.webp"
+                    alt="Sức Khỏe"
+                  />
+                  <p>Sức Khỏe</p>
+                </div>
+
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card16.webp"
+                    alt="Giày Dép Nữ"
+                  />
+                  <p>Giày Dép Nữ</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card17.webp"
+                    alt="Túi Ví Nữ"
+                  />
+                  <p>Túi Ví Nữ</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card18.webp"
+                    alt="Phụ Kiện & Trang Sức Nữ"
+                  />
+                  <p>Phụ Kiện & Trang Sức Nữ</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card19.webp"
+                    alt="Bách Hóa Online"
+                  />
+                  <p>Bách Hóa Online</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card20.webp"
+                    alt="Nhà Sách Online"
+                  />
+                  <p>Nhà Sách Online</p>
+                </div>
+
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card21.webp"
+                    alt="Balo & Túi Ví Nam"
+                  />
+                  <p>Balo & Túi Ví Nam</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card22.webp"
+                    alt="Đồ Chơi"
+                  />
+                  <p>Đồ Chơi</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card23.webp"
+                    alt="Chăm Sóc Thú Cưng"
+                  />
+                  <p>Chăm Sóc Thú Cưng</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card24.webp"
+                    alt="Dụng Cụ & Thiết Bị Tiện Ích"
+                  />
+                  <p>Dụng Cụ & Thiết Bị Tiện Ích</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card25.webp"
+                    alt="Thời Trang Trẻ Em"
+                  />
+                  <p>Thời Trang Trẻ Em</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card26.webp"
+                    alt="Giặt Giũ & Chăm Sóc Nhà Cửa"
+                  />
+                  <p>Giặt Giũ & Chăm Sóc Nhà Cửa</p>
+                </div>
+                <div class="category-card">
+                  <img
+                    src="asset/img/category-card/category-card27.webp"
+                    alt="Voucher & Dịch Vụ"
+                  />
+                  <p>Voucher & Dịch Vụ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="category-arrow next"
+            type="button"
+            aria-label="Danh mục sau"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="container flash-sale-section" aria-label="Flash sale">
+        <div class="flash-sale-header">
+          <div class="flash-title-wrap">
+            <h2 class="flash-title" aria-label="Flash sale">
+              <span>F</span>
+              <i
+                class="bi bi-lightning-charge-fill flash-bolt"
+                aria-hidden="true"
+              ></i>
+              <span>A</span>
+              <span>S</span>
+              <span>H</span>
+              <span class="sale">SALE</span>
+            </h2>
+            <div class="flash-timer" aria-label="Thời gian flash sale còn lại">
+              <span>00</span>
+              <span>00</span>
+              <span>00</span>
+            </div>
+          </div>
+          <a href="#">Xem tất cả <i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="flash-sale-carousel">
+          <button
+            class="flash-arrow prev"
+            type="button"
+            aria-label="Sản phẩm trước"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div class="flash-sale-viewport">
+            <div class="flash-sale-track">
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card1.webp"
+                  alt="Sản phẩm 1"
+                />
+                <p class="flash-price">136.818 ₫</p>
+                <p class="flash-old-price">160.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 72%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card2.webp"
+                  alt="Sản phẩm 2"
+                />
+                <p class="flash-price">17.280 ₫</p>
+                <p class="flash-old-price">29.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 65%"></span><em>CHỈ CÒN 3</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card3.webp"
+                  alt="Sản phẩm 3"
+                />
+                <p class="flash-price">21.000 ₫</p>
+                <p class="flash-old-price">40.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 79%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card4.webp"
+                  alt="Sản phẩm 4"
+                />
+                <p class="flash-price">7.999 ₫</p>
+                <p class="flash-old-price">12.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 54%"></span><em>ĐÃ BÁN 19</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card5.webp"
+                  alt="Sản phẩm 5"
+                />
+                <p class="flash-price">160.556 ₫</p>
+                <p class="flash-old-price">220.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 82%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card6.webp"
+                  alt="Sản phẩm 6"
+                />
+                <p class="flash-price">98.000 ₫</p>
+                <p class="flash-old-price">140.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 70%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card7.webp"
+                  alt="Sản phẩm 7"
+                />
+                <p class="flash-price">62.500 ₫</p>
+                <p class="flash-old-price">95.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 52%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card8.webp"
+                  alt="Sản phẩm 8"
+                />
+                <p class="flash-price">89.000 ₫</p>
+                <p class="flash-old-price">132.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 76%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card9.webp"
+                  alt="Sản phẩm 9"
+                />
+                <p class="flash-price">43.000 ₫</p>
+                <p class="flash-old-price">68.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 47%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card10.webp"
+                  alt="Sản phẩm 10"
+                />
+                <p class="flash-price">52.000 ₫</p>
+                <p class="flash-old-price">74.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 66%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card11.webp"
+                  alt="Sản phẩm 11"
+                />
+                <p class="flash-price">105.000 ₫</p>
+                <p class="flash-old-price">160.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 63%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card12.webp"
+                  alt="Sản phẩm 12"
+                />
+                <p class="flash-price">74.000 ₫</p>
+                <p class="flash-old-price">110.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 58%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card13.webp"
+                  alt="Sản phẩm 13"
+                />
+                <p class="flash-price">31.500 ₫</p>
+                <p class="flash-old-price">49.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 40%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card14.webp"
+                  alt="Sản phẩm 14"
+                />
+                <p class="flash-price">220.000 ₫</p>
+                <p class="flash-old-price">320.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 68%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card15.webp"
+                  alt="Sản phẩm 15"
+                />
+                <p class="flash-price">58.000 ₫</p>
+                <p class="flash-old-price">89.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 55%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card16.webp"
+                  alt="Sản phẩm 16"
+                />
+                <p class="flash-price">126.000 ₫</p>
+                <p class="flash-old-price">170.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 71%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card17.webp"
+                  alt="Sản phẩm 17"
+                />
+                <p class="flash-price">39.900 ₫</p>
+                <p class="flash-old-price">59.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 44%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+              <div class="flash-card">
+                <span class="flash-fav">Yêu thích</span>
+                <img
+                  src="asset/img/flash-card/flash-card18.webp"
+                  alt="Sản phẩm 18"
+                />
+                <p class="flash-price">84.000 ₫</p>
+                <p class="flash-old-price">120.000 ₫</p>
+                <div class="flash-progress">
+                  <span style="width: 60%"></span><em>ĐANG BÁN CHẠY</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="flash-arrow next"
+            type="button"
+            aria-label="Sản phẩm sau"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="container promo-slider-section promo-slider-section--with-banner"
+        aria-label="Shopee Mall"
+      >
+        <div class="promo-section-header">
+          <div class="promo-header-left">
+            <h2>SHOPEE MALL</h2>
+            <ul class="promo-benefits" aria-label="Quyền lợi Shopee Mall">
+              <li>
+                <i class="bi bi-arrow-repeat"></i> Trả Hàng Miễn Phí 15 Ngày
+              </li>
+              <li><i class="bi bi-shield-check"></i> Hàng Chính Hãng 100%</li>
+              <li><i class="bi bi-truck"></i> Miễn Phí Vận Chuyển</li>
+            </ul>
+          </div>
+          <a href="#">Xem Tất Cả <i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="promo-layout">
+          <a href="#" class="promo-banner" aria-label="Banner Shopee Mall">
+            <img
+              src="asset/img/promo-banner/promo-banner.jpg"
+              alt="Banner Shopee Mall"
+            />
+          </a>
+
+          <div class="promo-slider" data-per-view="8" data-step="8">
+            <button
+              class="promo-arrow prev"
+              type="button"
+              aria-label="Mục trước"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div class="promo-viewport">
+              <div class="promo-track">
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double1.webp"
+                    alt="Mall 1"
+                  />
+                  <p>Ưu đãi đến 50%</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double2.webp"
+                    alt="Mall 2"
+                  />
+                  <p>Mua 1 được 2</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double3.webp"
+                    alt="Mall 3"
+                  />
+                  <p>Mua 1 tặng 1</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double4.webp"
+                    alt="Mall 4"
+                  />
+                  <p>Mua là có quà</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double5.webp"
+                    alt="Mall 5"
+                  />
+                  <p>Thương hiệu chính hãng</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double6.webp"
+                    alt="Mall 6"
+                  />
+                  <p>Siêu voucher hôm nay</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double7.webp"
+                    alt="Mall 7"
+                  />
+                  <p>Giảm sốc cuối tuần</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double8.webp"
+                    alt="Mall 8"
+                  />
+                  <p>Ưu đãi có hạn</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double9.webp"
+                    alt="Mall 9"
+                  />
+                  <p>Mua 2 giảm thêm</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double10.webp"
+                    alt="Mall 10"
+                  />
+                  <p>Tặng quà chính hãng</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double11.webp"
+                    alt="Mall 11"
+                  />
+                  <p>Mua là freeship</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double12.webp"
+                    alt="Mall 12"
+                  />
+                  <p>Mua ngay giá hời</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double13.webp"
+                    alt="Mall 13"
+                  />
+                  <p>Hàng mới về</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double14.webp"
+                    alt="Mall 14"
+                  />
+                  <p>Giảm đến nửa giá</p>
+                </div>
+                <div class="promo-card promo-card--double">
+                  <img
+                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double15.webp"
+                    alt="Mall 15"
+                  />
+                  <p>Deal theo khung giờ</p>
+                </div>
+                <div class="promo-card promo-card--double promo-card--view-all">
+                  <a
+                    href="#"
+                    class="promo-view-all-link"
+                    aria-label="Xem tất cả"
+                  >
+                    <span>Xem tất cả</span>
+                    <span class="promo-view-all-icon" aria-hidden="true">
+                      <i class="bi bi-chevron-right"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <button class="promo-arrow next" type="button" aria-label="Mục sau">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="container promo-slider-section"
+        aria-label="Tìm kiếm hàng đầu"
+      >
+        <div class="promo-section-header">
+          <h2>TÌM KIẾM HÀNG ĐẦU</h2>
+          <a href="#">Xem Tất Cả <i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="promo-slider" data-per-view="6" data-step="6">
+          <button class="promo-arrow prev" type="button" aria-label="Mục trước">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div class="promo-viewport">
+            <div class="promo-track">
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single1.jpg"
+                  alt="Top 1"
+                />
+                <p>Áo Ngực Không Dây</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single2.jpg"
+                  alt="Top 2"
+                />
+                <p>Bao Cao Su</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single3.jpg"
+                  alt="Top 3"
+                />
+                <p>Áo Thun</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single4.jpg"
+                  alt="Top 4"
+                />
+                <p>Áo Lót Nữ Không Gọng</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single5.jpg"
+                  alt="Top 5"
+                />
+                <p>Bút Mực Gel</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single6.jpg"
+                  alt="Top 6"
+                />
+                <p>Bánh Tráng Trộn</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single7.jpg"
+                  alt="Top 7"
+                />
+                <p>Áo Babydoll Nữ Tay Bèo</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single8.jpg"
+                  alt="Top 8"
+                />
+                <p>Quần Lót Nữ Cotton</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single9.jpg"
+                  alt="Top 9"
+                />
+                <p>Dép Đi Trong Nhà</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single10.jpg"
+                  alt="Top 10"
+                />
+                <p>Son Kem Lì Mịn Môi Romand</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single11.jpg"
+                  alt="Top 11"
+                />
+                <p>Ô Dù</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single12.jpg"
+                  alt="Top 12"
+                />
+                <p>Bộ Chăn Ga Gối Cotton</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single13.jpg"
+                  alt="Top 13"
+                />
+                <p>Quần Lót Nam Co Dãn</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single14.jpg"
+                  alt="Top 14"
+                />
+                <p>Áo Thun Polo Nam Ngắn Tay</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single15.jpg"
+                  alt="Top 15"
+                />
+                <p>Dầu Gội Nguyên Xuân</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single16.jpg"
+                  alt="Top 16"
+                />
+                <p>Quần Ống Rộng</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single17.jpg"
+                  alt="Top 17"
+                />
+                <p>Nước Giặt Xả Maxkleen</p>
+              </div>
+              <div class="promo-card promo-card--single">
+                <img
+                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single18.jpg"
+                  alt="Top 18"
+                />
+                <p>Quần Ống Rộng Nữ</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="promo-arrow next" type="button" aria-label="Mục sau">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Shoppe. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="asset/js/main.js"></script>
+  </body>
+</html>
+<!-- 13) Kết thúc tài liệu HTML -->

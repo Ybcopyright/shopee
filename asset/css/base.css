@@ -1,0 +1,13 @@
+* {
+  /* A) Universal selector (*): tác động lên toàn bộ phần tử trong trang để tạo nền nhất quán trước khi styling chi tiết */
+  margin: 0; /* A1) Xóa margin mặc định do browser tự thêm (ví dụ body, h1, p...) để tránh lệch khoảng cách ngoài ý muốn */
+  padding: 0; /* A2) Xóa padding mặc định của các thẻ (như ul, ol...) để dễ kiểm soát spacing bằng CSS của bạn */
+  box-sizing: border-box; /* A3) Kích thước width/height sẽ bao gồm cả padding + border => tính toán layout dễ và ổn định hơn */
+}
+
+body {
+  /* B) Thẻ body: vùng chứa toàn bộ phần nội dung hiển thị trong cửa sổ trình duyệt */
+  font-family:
+    Arial, sans-serif; /* B1) Thiết lập font mặc định toàn trang: ưu tiên Arial, nếu thiếu thì fallback sang nhóm sans-serif */
+  line-height: 1.5; /* B2) Đặt chiều cao dòng 1.5 lần font-size để tăng readability, đặc biệt với đoạn văn dài */
+}
