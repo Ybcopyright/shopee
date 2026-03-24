@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <!-- 1) Khai báo chuẩn HTML5: giúp trình duyệt dùng chế độ render tiêu chuẩn, tránh Quirks Mode (chế độ cũ dễ lệch layout) -->
 <html lang="vi">
   <!-- 2) Phần tử gốc của tài liệu HTML; lang="vi" giúp SEO, screen reader, và trình dịch tự động nhận diện nội dung tiếng Việt chính xác -->
@@ -18,6 +18,8 @@
     <!-- 6.1) Nạp bộ icon Bootstrap Icons từ CDN -->
     <link rel="stylesheet" href="asset/css/main.css" />
     <!-- 7) Nạp CSS chính sau: tận dụng cơ chế cascade để override base khi cần -->
+    <link rel="stylesheet" href="asset/css/responsive.css" />
+    <!-- 7.1) Nạp CSS responsive riêng cho media queries -->
   </head>
   <body>
     <header class="shop-header">
@@ -228,812 +230,2696 @@
         </nav>
       </section>
 
-      <section class="container category-section" aria-label="Danh mục">
-        <h2 class="category-title">DANH MỤC</h2>
+      <div class="home-content-wrap">
+        <div class="section-contrast-bg">
+          <section class="container category-section" aria-label="Danh mục">
+            <h2 class="category-title">DANH MỤC</h2>
 
-        <div class="category-carousel">
-          <button
-            class="category-arrow prev"
-            type="button"
-            aria-label="Danh mục trước"
+            <div class="category-carousel">
+              <button
+                class="category-arrow prev"
+                type="button"
+                aria-label="Danh mục trước"
+              >
+                <i class="bi bi-chevron-left"></i>
+              </button>
+
+              <div class="category-viewport">
+                <div class="category-track">
+                  <div class="category-grid">
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card1.webp"
+                        alt="Thời Trang Nam"
+                      />
+                      <p>Thời Trang Nam</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card2.webp"
+                        alt="Điện Thoại & Phụ Kiện"
+                      />
+                      <p>Điện Thoại & Phụ Kiện</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card3.webp"
+                        alt="Thiết Bị Điện Tử"
+                      />
+                      <p>Thiết Bị Điện Tử</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card4.webp"
+                        alt="Máy Tính & Laptop"
+                      />
+                      <p>Máy Tính & Laptop</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card5.webp"
+                        alt="Máy Ảnh & Máy Quay Phim"
+                      />
+                      <p>Máy Ảnh & Máy Quay Phim</p>
+                    </div>
+
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card6.webp"
+                        alt="Đồng Hồ"
+                      />
+                      <p>Đồng Hồ</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card7.webp"
+                        alt="Giày Dép Nam"
+                      />
+                      <p>Giày Dép Nam</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card8.webp"
+                        alt="Thiết Bị Điện Gia Dụng"
+                      />
+                      <p>Thiết Bị Điện Gia Dụng</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card9.webp"
+                        alt="Thể Thao & Du Lịch"
+                      />
+                      <p>Thể Thao & Du Lịch</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card10.webp"
+                        alt="Ô Tô & Xe Máy & Xe Đạp"
+                      />
+                      <p>Ô Tô & Xe Máy & Xe Đạp</p>
+                    </div>
+
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card11.webp"
+                        alt="Thời Trang Nữ"
+                      />
+                      <p>Thời Trang Nữ</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card12.webp"
+                        alt="Mẹ & Bé"
+                      />
+                      <p>Mẹ & Bé</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card13.webp"
+                        alt="Nhà Cửa & Đời Sống"
+                      />
+                      <p>Nhà Cửa & Đời Sống</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card14.webp"
+                        alt="Sắc Đẹp"
+                      />
+                      <p>Sắc Đẹp</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card15.webp"
+                        alt="Sức Khỏe"
+                      />
+                      <p>Sức Khỏe</p>
+                    </div>
+
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card16.webp"
+                        alt="Giày Dép Nữ"
+                      />
+                      <p>Giày Dép Nữ</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card17.webp"
+                        alt="Túi Ví Nữ"
+                      />
+                      <p>Túi Ví Nữ</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card18.webp"
+                        alt="Phụ Kiện & Trang Sức Nữ"
+                      />
+                      <p>Phụ Kiện & Trang Sức Nữ</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card19.webp"
+                        alt="Bách Hóa Online"
+                      />
+                      <p>Bách Hóa Online</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card20.webp"
+                        alt="Nhà Sách Online"
+                      />
+                      <p>Nhà Sách Online</p>
+                    </div>
+
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card21.webp"
+                        alt="Balo & Túi Ví Nam"
+                      />
+                      <p>Balo & Túi Ví Nam</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card22.webp"
+                        alt="Đồ Chơi"
+                      />
+                      <p>Đồ Chơi</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card23.webp"
+                        alt="Chăm Sóc Thú Cưng"
+                      />
+                      <p>Chăm Sóc Thú Cưng</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card24.webp"
+                        alt="Dụng Cụ & Thiết Bị Tiện Ích"
+                      />
+                      <p>Dụng Cụ & Thiết Bị Tiện Ích</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card25.webp"
+                        alt="Thời Trang Trẻ Em"
+                      />
+                      <p>Thời Trang Trẻ Em</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card26.webp"
+                        alt="Giặt Giũ & Chăm Sóc Nhà Cửa"
+                      />
+                      <p>Giặt Giũ & Chăm Sóc Nhà Cửa</p>
+                    </div>
+                    <div class="category-card">
+                      <img
+                        src="asset/img/category-card/category-card27.webp"
+                        alt="Voucher & Dịch Vụ"
+                      />
+                      <p>Voucher & Dịch Vụ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="category-arrow next"
+                type="button"
+                aria-label="Danh mục sau"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <section class="container flash-sale-section" aria-label="Flash sale">
+            <div class="flash-sale-header">
+              <div class="flash-title-wrap">
+                <h2 class="flash-title" aria-label="Flash sale">
+                  <span>F</span>
+                  <i
+                    class="bi bi-lightning-charge-fill flash-bolt"
+                    aria-hidden="true"
+                  ></i>
+                  <span>A</span>
+                  <span>S</span>
+                  <span>H</span>
+                  <span class="sale">SALE</span>
+                </h2>
+                <div
+                  class="flash-timer"
+                  aria-label="Thời gian flash sale còn lại"
+                >
+                  <span>00</span>
+                  <span>00</span>
+                  <span>00</span>
+                </div>
+              </div>
+              <a href="#">Xem tất cả <i class="bi bi-chevron-right"></i></a>
+            </div>
+
+            <div class="flash-sale-carousel">
+              <button
+                class="flash-arrow prev"
+                type="button"
+                aria-label="Sản phẩm trước"
+              >
+                <i class="bi bi-chevron-left"></i>
+              </button>
+
+              <div class="flash-sale-viewport">
+                <div class="flash-sale-track">
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card1.webp"
+                      alt="Sản phẩm 1"
+                    />
+                    <p class="flash-price">136.818 ₫</p>
+                    <p class="flash-old-price">160.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 72%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card2.webp"
+                      alt="Sản phẩm 2"
+                    />
+                    <p class="flash-price">17.280 ₫</p>
+                    <p class="flash-old-price">29.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 65%"></span><em>CHỈ CÒN 3</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card3.webp"
+                      alt="Sản phẩm 3"
+                    />
+                    <p class="flash-price">21.000 ₫</p>
+                    <p class="flash-old-price">40.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 79%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card4.webp"
+                      alt="Sản phẩm 4"
+                    />
+                    <p class="flash-price">7.999 ₫</p>
+                    <p class="flash-old-price">12.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 54%"></span><em>ĐÃ BÁN 19</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card5.webp"
+                      alt="Sản phẩm 5"
+                    />
+                    <p class="flash-price">160.556 ₫</p>
+                    <p class="flash-old-price">220.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 82%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card6.webp"
+                      alt="Sản phẩm 6"
+                    />
+                    <p class="flash-price">98.000 ₫</p>
+                    <p class="flash-old-price">140.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 70%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card7.webp"
+                      alt="Sản phẩm 7"
+                    />
+                    <p class="flash-price">62.500 ₫</p>
+                    <p class="flash-old-price">95.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 52%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card8.webp"
+                      alt="Sản phẩm 8"
+                    />
+                    <p class="flash-price">89.000 ₫</p>
+                    <p class="flash-old-price">132.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 76%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card9.webp"
+                      alt="Sản phẩm 9"
+                    />
+                    <p class="flash-price">43.000 ₫</p>
+                    <p class="flash-old-price">68.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 47%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card10.webp"
+                      alt="Sản phẩm 10"
+                    />
+                    <p class="flash-price">52.000 ₫</p>
+                    <p class="flash-old-price">74.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 66%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card11.webp"
+                      alt="Sản phẩm 11"
+                    />
+                    <p class="flash-price">105.000 ₫</p>
+                    <p class="flash-old-price">160.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 63%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card12.webp"
+                      alt="Sản phẩm 12"
+                    />
+                    <p class="flash-price">74.000 ₫</p>
+                    <p class="flash-old-price">110.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 58%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card13.webp"
+                      alt="Sản phẩm 13"
+                    />
+                    <p class="flash-price">31.500 ₫</p>
+                    <p class="flash-old-price">49.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 40%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card14.webp"
+                      alt="Sản phẩm 14"
+                    />
+                    <p class="flash-price">220.000 ₫</p>
+                    <p class="flash-old-price">320.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 68%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card15.webp"
+                      alt="Sản phẩm 15"
+                    />
+                    <p class="flash-price">58.000 ₫</p>
+                    <p class="flash-old-price">89.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 55%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card16.webp"
+                      alt="Sản phẩm 16"
+                    />
+                    <p class="flash-price">126.000 ₫</p>
+                    <p class="flash-old-price">170.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 71%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card17.webp"
+                      alt="Sản phẩm 17"
+                    />
+                    <p class="flash-price">39.900 ₫</p>
+                    <p class="flash-old-price">59.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 44%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                  <div class="flash-card">
+                    <span class="flash-fav">Yêu thích</span>
+                    <img
+                      src="asset/img/flash-card/flash-card18.webp"
+                      alt="Sản phẩm 18"
+                    />
+                    <p class="flash-price">84.000 ₫</p>
+                    <p class="flash-old-price">120.000 ₫</p>
+                    <div class="flash-progress">
+                      <span style="width: 60%"></span><em>ĐANG BÁN CHẠY</em>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="flash-arrow next"
+                type="button"
+                aria-label="Sản phẩm sau"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <section
+            class="container promo-slider-section promo-slider-section--with-banner"
+            aria-label="Shopee Mall"
           >
-            <i class="bi bi-chevron-left"></i>
-          </button>
+            <div class="promo-section-header">
+              <div class="promo-header-left">
+                <h2>SHOPEE MALL</h2>
+                <ul class="promo-benefits" aria-label="Quyền lợi Shopee Mall">
+                  <li>
+                    <i class="bi bi-arrow-repeat"></i> Trả Hàng Miễn Phí 15 Ngày
+                  </li>
+                  <li>
+                    <i class="bi bi-shield-check"></i> Hàng Chính Hãng 100%
+                  </li>
+                  <li><i class="bi bi-truck"></i> Miễn Phí Vận Chuyển</li>
+                </ul>
+              </div>
+              <a href="#">Xem Tất Cả <i class="bi bi-chevron-right"></i></a>
+            </div>
 
-          <div class="category-viewport">
-            <div class="category-track">
-              <div class="category-grid">
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card1.webp"
-                    alt="Thời Trang Nam"
-                  />
-                  <p>Thời Trang Nam</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card2.webp"
-                    alt="Điện Thoại & Phụ Kiện"
-                  />
-                  <p>Điện Thoại & Phụ Kiện</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card3.webp"
-                    alt="Thiết Bị Điện Tử"
-                  />
-                  <p>Thiết Bị Điện Tử</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card4.webp"
-                    alt="Máy Tính & Laptop"
-                  />
-                  <p>Máy Tính & Laptop</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card5.webp"
-                    alt="Máy Ảnh & Máy Quay Phim"
-                  />
-                  <p>Máy Ảnh & Máy Quay Phim</p>
+            <div class="promo-layout">
+              <a href="#" class="promo-banner" aria-label="Banner Shopee Mall">
+                <img
+                  src="asset/img/promo-banner/promo-banner.jpg"
+                  alt="Banner Shopee Mall"
+                />
+              </a>
+
+              <div class="promo-slider" data-per-view="8" data-step="8">
+                <button
+                  class="promo-arrow prev"
+                  type="button"
+                  aria-label="Mục trước"
+                >
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <div class="promo-viewport">
+                  <div class="promo-track">
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double1.webp"
+                        alt="Mall 1"
+                      />
+                      <p>Ưu đãi đến 50%</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double2.webp"
+                        alt="Mall 2"
+                      />
+                      <p>Mua 1 được 2</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double3.webp"
+                        alt="Mall 3"
+                      />
+                      <p>Mua 1 tặng 1</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double4.webp"
+                        alt="Mall 4"
+                      />
+                      <p>Mua là có quà</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double5.webp"
+                        alt="Mall 5"
+                      />
+                      <p>Thương hiệu chính hãng</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double6.webp"
+                        alt="Mall 6"
+                      />
+                      <p>Siêu voucher hôm nay</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double7.webp"
+                        alt="Mall 7"
+                      />
+                      <p>Giảm sốc cuối tuần</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double8.webp"
+                        alt="Mall 8"
+                      />
+                      <p>Ưu đãi có hạn</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double9.webp"
+                        alt="Mall 9"
+                      />
+                      <p>Mua 2 giảm thêm</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double10.webp"
+                        alt="Mall 10"
+                      />
+                      <p>Tặng quà chính hãng</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double11.webp"
+                        alt="Mall 11"
+                      />
+                      <p>Mua là freeship</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double12.webp"
+                        alt="Mall 12"
+                      />
+                      <p>Mua ngay giá hời</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double13.webp"
+                        alt="Mall 13"
+                      />
+                      <p>Hàng mới về</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double14.webp"
+                        alt="Mall 14"
+                      />
+                      <p>Giảm đến nửa giá</p>
+                    </div>
+                    <div class="promo-card promo-card--double">
+                      <img
+                        src="asset/img/promo-card promo-card--double/promo-card promo-card--double15.webp"
+                        alt="Mall 15"
+                      />
+                      <p>Deal theo khung giờ</p>
+                    </div>
+                    <div
+                      class="promo-card promo-card--double promo-card--view-all"
+                    >
+                      <a
+                        href="#"
+                        class="promo-view-all-link"
+                        aria-label="Xem tất cả"
+                      >
+                        <span>Xem tất cả</span>
+                        <span class="promo-view-all-icon" aria-hidden="true">
+                          <i class="bi bi-chevron-right"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card6.webp"
-                    alt="Đồng Hồ"
-                  />
-                  <p>Đồng Hồ</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card7.webp"
-                    alt="Giày Dép Nam"
-                  />
-                  <p>Giày Dép Nam</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card8.webp"
-                    alt="Thiết Bị Điện Gia Dụng"
-                  />
-                  <p>Thiết Bị Điện Gia Dụng</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card9.webp"
-                    alt="Thể Thao & Du Lịch"
-                  />
-                  <p>Thể Thao & Du Lịch</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card10.webp"
-                    alt="Ô Tô & Xe Máy & Xe Đạp"
-                  />
-                  <p>Ô Tô & Xe Máy & Xe Đạp</p>
-                </div>
-
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card11.webp"
-                    alt="Thời Trang Nữ"
-                  />
-                  <p>Thời Trang Nữ</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card12.webp"
-                    alt="Mẹ & Bé"
-                  />
-                  <p>Mẹ & Bé</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card13.webp"
-                    alt="Nhà Cửa & Đời Sống"
-                  />
-                  <p>Nhà Cửa & Đời Sống</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card14.webp"
-                    alt="Sắc Đẹp"
-                  />
-                  <p>Sắc Đẹp</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card15.webp"
-                    alt="Sức Khỏe"
-                  />
-                  <p>Sức Khỏe</p>
-                </div>
-
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card16.webp"
-                    alt="Giày Dép Nữ"
-                  />
-                  <p>Giày Dép Nữ</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card17.webp"
-                    alt="Túi Ví Nữ"
-                  />
-                  <p>Túi Ví Nữ</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card18.webp"
-                    alt="Phụ Kiện & Trang Sức Nữ"
-                  />
-                  <p>Phụ Kiện & Trang Sức Nữ</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card19.webp"
-                    alt="Bách Hóa Online"
-                  />
-                  <p>Bách Hóa Online</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card20.webp"
-                    alt="Nhà Sách Online"
-                  />
-                  <p>Nhà Sách Online</p>
-                </div>
-
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card21.webp"
-                    alt="Balo & Túi Ví Nam"
-                  />
-                  <p>Balo & Túi Ví Nam</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card22.webp"
-                    alt="Đồ Chơi"
-                  />
-                  <p>Đồ Chơi</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card23.webp"
-                    alt="Chăm Sóc Thú Cưng"
-                  />
-                  <p>Chăm Sóc Thú Cưng</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card24.webp"
-                    alt="Dụng Cụ & Thiết Bị Tiện Ích"
-                  />
-                  <p>Dụng Cụ & Thiết Bị Tiện Ích</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card25.webp"
-                    alt="Thời Trang Trẻ Em"
-                  />
-                  <p>Thời Trang Trẻ Em</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card26.webp"
-                    alt="Giặt Giũ & Chăm Sóc Nhà Cửa"
-                  />
-                  <p>Giặt Giũ & Chăm Sóc Nhà Cửa</p>
-                </div>
-                <div class="category-card">
-                  <img
-                    src="asset/img/category-card/category-card27.webp"
-                    alt="Voucher & Dịch Vụ"
-                  />
-                  <p>Voucher & Dịch Vụ</p>
-                </div>
+                <button
+                  class="promo-arrow next"
+                  type="button"
+                  aria-label="Mục sau"
+                >
+                  <i class="bi bi-chevron-right"></i>
+                </button>
               </div>
             </div>
-          </div>
+          </section>
 
-          <button
-            class="category-arrow next"
-            type="button"
-            aria-label="Danh mục sau"
+          <section
+            class="container promo-slider-section"
+            aria-label="Tìm kiếm hàng đầu"
           >
-            <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-      </section>
-
-      <section class="container flash-sale-section" aria-label="Flash sale">
-        <div class="flash-sale-header">
-          <div class="flash-title-wrap">
-            <h2 class="flash-title" aria-label="Flash sale">
-              <span>F</span>
-              <i
-                class="bi bi-lightning-charge-fill flash-bolt"
-                aria-hidden="true"
-              ></i>
-              <span>A</span>
-              <span>S</span>
-              <span>H</span>
-              <span class="sale">SALE</span>
-            </h2>
-            <div class="flash-timer" aria-label="Thời gian flash sale còn lại">
-              <span>00</span>
-              <span>00</span>
-              <span>00</span>
+            <div class="promo-section-header">
+              <h2>TÌM KIẾM HÀNG ĐẦU</h2>
+              <a href="#">Xem Tất Cả <i class="bi bi-chevron-right"></i></a>
             </div>
-          </div>
-          <a href="#">Xem tất cả <i class="bi bi-chevron-right"></i></a>
-        </div>
 
-        <div class="flash-sale-carousel">
-          <button
-            class="flash-arrow prev"
-            type="button"
-            aria-label="Sản phẩm trước"
-          >
-            <i class="bi bi-chevron-left"></i>
-          </button>
+            <div class="promo-slider" data-per-view="6" data-step="6">
+              <button
+                class="promo-arrow prev"
+                type="button"
+                aria-label="Mục trước"
+              >
+                <i class="bi bi-chevron-left"></i>
+              </button>
 
-          <div class="flash-sale-viewport">
-            <div class="flash-sale-track">
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card1.webp"
-                  alt="Sản phẩm 1"
-                />
-                <p class="flash-price">136.818 ₫</p>
-                <p class="flash-old-price">160.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 72%"></span><em>ĐANG BÁN CHẠY</em>
+              <div class="promo-viewport">
+                <div class="promo-track">
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single1.jpg"
+                      alt="Top 1"
+                    />
+                    <p>Áo Ngực Không Dây</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single2.jpg"
+                      alt="Top 2"
+                    />
+                    <p>Bao Cao Su</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single3.jpg"
+                      alt="Top 3"
+                    />
+                    <p>Áo Thun</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single4.jpg"
+                      alt="Top 4"
+                    />
+                    <p>Áo Lót Nữ Không Gọng</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single5.jpg"
+                      alt="Top 5"
+                    />
+                    <p>Bút Mực Gel</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single6.jpg"
+                      alt="Top 6"
+                    />
+                    <p>Bánh Tráng Trộn</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single7.jpg"
+                      alt="Top 7"
+                    />
+                    <p>Áo Babydoll Nữ Tay Bèo</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single8.jpg"
+                      alt="Top 8"
+                    />
+                    <p>Quần Lót Nữ Cotton</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single9.jpg"
+                      alt="Top 9"
+                    />
+                    <p>Dép Đi Trong Nhà</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single10.jpg"
+                      alt="Top 10"
+                    />
+                    <p>Son Kem Lì Mịn Môi Romand</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single11.jpg"
+                      alt="Top 11"
+                    />
+                    <p>Ô Dù</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single12.jpg"
+                      alt="Top 12"
+                    />
+                    <p>Bộ Chăn Ga Gối Cotton</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single13.jpg"
+                      alt="Top 13"
+                    />
+                    <p>Quần Lót Nam Co Dãn</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single14.jpg"
+                      alt="Top 14"
+                    />
+                    <p>Áo Thun Polo Nam Ngắn Tay</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single15.jpg"
+                      alt="Top 15"
+                    />
+                    <p>Dầu Gội Nguyên Xuân</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single16.jpg"
+                      alt="Top 16"
+                    />
+                    <p>Quần Ống Rộng</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single17.jpg"
+                      alt="Top 17"
+                    />
+                    <p>Nước Giặt Xả Maxkleen</p>
+                  </div>
+                  <div class="promo-card promo-card--single">
+                    <img
+                      src="asset/img/promo-card promo-card--single/promo-card promo-card--single18.jpg"
+                      alt="Top 18"
+                    />
+                    <p>Quần Ống Rộng Nữ</p>
+                  </div>
                 </div>
               </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card2.webp"
-                  alt="Sản phẩm 2"
-                />
-                <p class="flash-price">17.280 ₫</p>
-                <p class="flash-old-price">29.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 65%"></span><em>CHỈ CÒN 3</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card3.webp"
-                  alt="Sản phẩm 3"
-                />
-                <p class="flash-price">21.000 ₫</p>
-                <p class="flash-old-price">40.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 79%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card4.webp"
-                  alt="Sản phẩm 4"
-                />
-                <p class="flash-price">7.999 ₫</p>
-                <p class="flash-old-price">12.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 54%"></span><em>ĐÃ BÁN 19</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card5.webp"
-                  alt="Sản phẩm 5"
-                />
-                <p class="flash-price">160.556 ₫</p>
-                <p class="flash-old-price">220.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 82%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card6.webp"
-                  alt="Sản phẩm 6"
-                />
-                <p class="flash-price">98.000 ₫</p>
-                <p class="flash-old-price">140.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 70%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card7.webp"
-                  alt="Sản phẩm 7"
-                />
-                <p class="flash-price">62.500 ₫</p>
-                <p class="flash-old-price">95.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 52%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card8.webp"
-                  alt="Sản phẩm 8"
-                />
-                <p class="flash-price">89.000 ₫</p>
-                <p class="flash-old-price">132.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 76%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card9.webp"
-                  alt="Sản phẩm 9"
-                />
-                <p class="flash-price">43.000 ₫</p>
-                <p class="flash-old-price">68.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 47%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card10.webp"
-                  alt="Sản phẩm 10"
-                />
-                <p class="flash-price">52.000 ₫</p>
-                <p class="flash-old-price">74.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 66%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card11.webp"
-                  alt="Sản phẩm 11"
-                />
-                <p class="flash-price">105.000 ₫</p>
-                <p class="flash-old-price">160.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 63%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card12.webp"
-                  alt="Sản phẩm 12"
-                />
-                <p class="flash-price">74.000 ₫</p>
-                <p class="flash-old-price">110.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 58%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card13.webp"
-                  alt="Sản phẩm 13"
-                />
-                <p class="flash-price">31.500 ₫</p>
-                <p class="flash-old-price">49.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 40%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card14.webp"
-                  alt="Sản phẩm 14"
-                />
-                <p class="flash-price">220.000 ₫</p>
-                <p class="flash-old-price">320.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 68%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card15.webp"
-                  alt="Sản phẩm 15"
-                />
-                <p class="flash-price">58.000 ₫</p>
-                <p class="flash-old-price">89.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 55%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card16.webp"
-                  alt="Sản phẩm 16"
-                />
-                <p class="flash-price">126.000 ₫</p>
-                <p class="flash-old-price">170.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 71%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card17.webp"
-                  alt="Sản phẩm 17"
-                />
-                <p class="flash-price">39.900 ₫</p>
-                <p class="flash-old-price">59.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 44%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
-              <div class="flash-card">
-                <span class="flash-fav">Yêu thích</span>
-                <img
-                  src="asset/img/flash-card/flash-card18.webp"
-                  alt="Sản phẩm 18"
-                />
-                <p class="flash-price">84.000 ₫</p>
-                <p class="flash-old-price">120.000 ₫</p>
-                <div class="flash-progress">
-                  <span style="width: 60%"></span><em>ĐANG BÁN CHẠY</em>
-                </div>
-              </div>
+
+              <button
+                class="promo-arrow next"
+                type="button"
+                aria-label="Mục sau"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </button>
             </div>
-          </div>
+          </section>
 
-          <button
-            class="flash-arrow next"
-            type="button"
-            aria-label="Sản phẩm sau"
+          <section
+            class="container today-suggest-section"
+            aria-label="Gợi ý hôm nay"
           >
-            <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-      </section>
+            <div class="today-suggest-header">
+              <h2>GỢI Ý HÔM NAY</h2>
+            </div>
+            <div class="today-suggest-grid" id="todaySuggestGrid">
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-93%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-01/main.webp"
+                    alt="Bánh tráng Phơi Sương COMBO Ú Ù AVAGI (Bánh tráng + Tóp mỡ + túi Bơ + Ruốc hành phi) (1 sốt tắc + ớt rim)"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Bánh
+                    tráng Phơi Sương COMBO Ú Ù AVAGI (Bánh tráng + Tóp mỡ + túi
+                    Bơ + Ruốc hành phi) (1 sốt tắc + ớt rim)
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag"
+                      >Giá dành riêng bạn mới</span
+                    >
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">5.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 200k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-32%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-02/main.webp"
+                    alt="Máy Ép Tóc 4 Nấc Nhiệt Phiên Bản Nâng Cấp, Máy Là Tóc Duỗi Tóc Size To"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Máy
+                    Ép Tóc 4 Nấc Nhiệt Phiên Bản Nâng Cấp, Máy Là Tóc Duỗi Tóc
+                    Size To
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span
+                    ><span class="today-product-card__tag">#ShopThinhHanh</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">94.944₫</p>
+                    <p class="today-product-card__sold">Đã bán 5k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-44%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-03/main.webp"
+                    alt="Bút Acrylic Marker Set 24/36/48/60/80/120 Màu Tô Vẽ Trên Mọi Chất Liệu, Thỏa Sức Sáng Tạo DIY, Trang Trí Ốp, Giày, Cốc"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Bút
+                    Acrylic Marker Set 24/36/48/60/80/120 Màu Tô Vẽ Trên Mọi
+                    Chất Liệu, Thỏa Sức Sáng Tạo DIY, Trang Trí Ốp, Giày, Cốc
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">37.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 50k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-04/main.webp"
+                    alt="Thùng 200 Chiếc Khẩu Trang 5D Mask LOKA 3 Lớp Kháng Khuẩn Hàng Chính Hãng Công Ty, Nhiều Màu Đẹp, Túi Zíp"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Thùng
+                    200 Chiếc Khẩu Trang 5D Mask LOKA 3 Lớp Kháng Khuẩn Hàng
+                    Chính Hãng Công Ty, Nhiều Màu Đẹp, Túi Zíp
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">26.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 70k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-42%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-05/main.webp"
+                    alt="JBLue Tai Nghe Chơi Game Có Dây Với Đèn LED Và Mic, Tương Thích Với Máy Tính, Laptop Và Điện Thoại"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>JBLue
+                    Tai Nghe Chơi Game Có Dây Với Đèn LED Và Mic, Tương Thích
+                    Với Máy Tính, Laptop Và Điện Thoại
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">128.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-55%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-06/main.webp"
+                    alt="Áo sơ mi trắng nam nữ dài tay CD vải lụa trơn phối cổ tag logo ong thêu chữ basic boy phố SM160P"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Áo sơ
+                    mi trắng nam nữ dài tay CD vải lụa trơn phối cổ tag logo ong
+                    thêu chữ basic boy phố SM160P
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">99.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-31%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-07/main.webp"
+                    alt="Senbenbao Tai Nghe Bluetooth 5.3 Không Dây TWS Pro4 Kèm Hộp Sạc Điện Thoại"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span
+                    >Senbenbao Tai Nghe Bluetooth 5.3 Không Dây TWS Pro4 Kèm Hộp
+                    Sạc Điện Thoại
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">68.600₫</p>
+                    <p class="today-product-card__sold">Đã bán 40k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-08/main.webp"
+                    alt="Set 2 Bát Ăn Cơm Bằng Sứ Hình Gấu Cute"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Set 2
+                    Bát Ăn Cơm Bằng Sứ Hình Gấu Cute
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">20.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 100k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-41%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-09/main.webp"
+                    alt="Đèn LED Galaxy Cực Quang Hiệu Ứng Sống Động Trang Trí Phòng Ngủ Điều Khiển Từ Xa"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Đèn
+                    LED Galaxy Cực Quang Hiệu Ứng Sống Động Trang Trí Phòng Ngủ
+                    Điều Khiển Từ Xa
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">59.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 40k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-68%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-10/main.webp"
+                    alt="Áo Thun Nam Trơn 8 Màu Phù Hợp Cho Cả Nam Và Nữ Chất Liệu Cotton Co Dãn 2 Chiều, Thấm Hút Mồ Hôi"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Áo
+                    Thun Nam Trơn 8 Màu Phù Hợp Cho Cả Nam Và Nữ Chất Liệu
+                    Cotton Co Dãn 2 Chiều, Thấm Hút Mồ Hôi
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span
+                    ><span class="today-product-card__tag"
+                      >Giá dành riêng bạn mới</span
+                    >
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">95.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-11/main.webp"
+                    alt="Bánh Tráng Trộn Hành Phi 300gr - Hương Vị Ngọt Mặn Đặc Trưng, Lựa Chọn Cay Hoặc Không Cay"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Bánh
+                    Tráng Trộn Hành Phi 300gr - Hương Vị Ngọt Mặn Đặc Trưng, Lựa
+                    Chọn Cay Hoặc Không Cay
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">49.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-28%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-12/main.webp"
+                    alt="Máy Dập Phồng Tóc Bản Vuông 4 Cấp Độ Nhiệt, Lưỡi Dập Phủ Ceramic Bảo Vệ Tóc"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Máy
+                    Dập Phồng Tóc Bản Vuông 4 Cấp Độ Nhiệt, Lưỡi Dập Phủ Ceramic
+                    Bảo Vệ Tóc
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">101.200₫</p>
+                    <p class="today-product-card__sold">Đã bán 20k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-33%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-13/main.webp"
+                    alt="Khăn quàng cổ cashmere nam nữ LOULI SAIGON, khăn choàng cổ mùa đông cotton cao cấp thời trang Hàn Quốc K01"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Khăn
+                    quàng cổ cashmere nam nữ LOULI SAIGON, khăn choàng cổ mùa
+                    đông cotton cao cấp thời trang Hàn Quốc K01
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">150.300₫</p>
+                    <p class="today-product-card__sold">Đã bán 30k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-51%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-14/main.webp"
+                    alt="Dép ulzzang Nam Nữ phong cách Hàn Quốc - Dép Quai Ngang Blue And White - FREE SHIP"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Dép
+                    ulzzang Nam Nữ phong cách Hàn Quốc - Dép Quai Ngang Blue And
+                    White - FREE SHIP
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">48.999₫</p>
+                    <p class="today-product-card__sold">Đã bán 7k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-98%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-15/main.webp"
+                    alt="Quần đùi thun nam mặc ngủ cực mát"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Quần
+                    đùi thun nam mặc ngủ cực mát
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag"
+                      >Giá dành riêng bạn mới</span
+                    >
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">1.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 60k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-41%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-16/main.webp"
+                    alt="🔥 SỐC 🔥 Thắt Lưng Nam Mặt Xoay Khóa Tự Động Cao Cấp,Dây Nịt Nam Thắt Lưng Da Mặt Xoay Khóa Kim Loại"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>🔥
+                    SỐC 🔥 Thắt Lưng Nam Mặt Xoay Khóa Tự Động Cao Cấp,Dây Nịt
+                    Nam Thắt Lưng Da Mặt Xoay Khóa Kim Loại
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">29.499₫</p>
+                    <p class="today-product-card__sold">Đã bán 60k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-42%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-17/main.webp"
+                    alt="Bông Tẩy Trang Lamer 201 Miếng Mềm Mại Không Xơ Bông"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Bông
+                    Tẩy Trang Lamer 201 Miếng Mềm Mại Không Xơ Bông
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">34.500₫</p>
+                    <p class="today-product-card__sold">Đã bán 50k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-88%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-18/main.webp"
+                    alt="Bàn chải rửa mặt silicon mềm, làm sạch sâu và massage da hiệu quả - Có sẵn màu tím, hồng, xanh lam"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Bàn
+                    chải rửa mặt silicon mềm, làm sạch sâu và massage da hiệu
+                    quả - Có sẵn màu tím, hồng, xanh lam
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">1.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 60k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-19/main.webp"
+                    alt="tai nghe bluetooth không dây X55 chống ồn, âm thanh cao cấp, thiết kế hiện đại, màu đen, trắng, xanh"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>tai
+                    nghe bluetooth không dây X55 chống ồn, âm thanh cao cấp,
+                    thiết kế hiện đại, màu đen, trắng, xanh
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">60.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 40k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-20/main.webp"
+                    alt="Tua Vít Cán Đỏ Mới Về E6 - Thép Luyện Siêu Cứng - Tô Vít Kiểu Lùn Gọn Gàng"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Tua
+                    Vít Cán Đỏ Mới Về E6 - Thép Luyện Siêu Cứng - Tô Vít Kiểu
+                    Lùn Gọn Gàng
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">13.900₫</p>
+                    <p class="today-product-card__sold">Đã bán 3k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-21/main.webp"
+                    alt="Cốc Gấu Dán Tường Đa Năng Để Đựng Bàn Chải Đánh Răng Có Lỗ Thoát Nước Tiện Lợi - Kệ Hộp Dán Tường Đựng Xinh Xắn 88183"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Cốc
+                    Gấu Dán Tường Đa Năng Để Đựng Bàn Chải Đánh Răng Có Lỗ Thoát
+                    Nước Tiện Lợi - Kệ Hộp Dán Tường Đựng Xinh Xắn 88183
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">9.400₫</p>
+                    <p class="today-product-card__sold">Đã bán 70k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-25%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-22/main.webp"
+                    alt="Lược gỡ rối , tạo kiểu chải tóc làm phồng tóc hình bán nguyệt mềm - Dbavio"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Lược
+                    gỡ rối , tạo kiểu chải tóc làm phồng tóc hình bán nguyệt mềm
+                    - Dbavio
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">15.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 100k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-23/main.webp"
+                    alt="COMBO bánh tráng phơi sương muối tép hành NHỎ (Tặng bơ)"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>COMBO
+                    bánh tráng phơi sương muối tép hành NHỎ (Tặng bơ)
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">50.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 80k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-24/main.webp"
+                    alt="Chống lăn micro Xám - Đen - Xanh - Cam (Trên thân có in chữ MIC)"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Chống
+                    lăn micro Xám - Đen - Xanh - Cam (Trên thân có in chữ MIC)
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">10.500₫</p>
+                    <p class="today-product-card__sold">Đã bán 4k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-25/main.webp"
+                    alt="MUA 1 TẶNG 1 Máy Đuổi Chuột Gián Muỗi Ruồi Kiến Mối Bằng Sóng Siêu Âm - Chính Hãng Thames Bảo Hành 24 Tháng"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>MUA 1
+                    TẶNG 1 Máy Đuổi Chuột Gián Muỗi Ruồi Kiến Mối Bằng Sóng Siêu
+                    Âm - Chính Hãng Thames Bảo Hành 24 Tháng
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">89.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 60</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-35%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-26/main.webp"
+                    alt="Sa tế tôm cay TIGER FOOD Sốt sate nhà làm Siêu Cay Siêu Thơm Ngon chấm bánh tráng phơi sương,ướp đồ nướng Tuyệt Hảo"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Sa tế
+                    tôm cay TIGER FOOD Sốt sate nhà làm Siêu Cay Siêu Thơm Ngon
+                    chấm bánh tráng phơi sương,ướp đồ nướng Tuyệt Hảo
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">#ShopThinhHanh</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">39.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 6k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-10%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-27/main.webp"
+                    alt="Cáp Quang 10m Dùng Làm Diều, Chong Chóng Và Lồng Chim, Đa Kích Cỡ Từ 1.2mm Đến 4mm"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Cáp
+                    Quang 10m Dùng Làm Diều, Chong Chóng Và Lồng Chim, Đa Kích
+                    Cỡ Từ 1.2mm Đến 4mm
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">14.400₫</p>
+                    <p class="today-product-card__sold">Đã bán 30k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-14%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-28/main.webp"
+                    alt="Pin sony xperia XZ2 xịn bảo hành 6 tháng"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Pin
+                    sony xperia XZ2 xịn bảo hành 6 tháng
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">129.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 663</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-33%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-29/main.webp"
+                    alt="Combo 12 Hộp 600 Chiếc Tăm Chỉ Nha Khoa 2 Đầu Sợi Chỉ Mảnh, Tăm Chỉ Nha Khoa Vệ Sinh Kẽ Răng Chân Nướu"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Combo
+                    12 Hộp 600 Chiếc Tăm Chỉ Nha Khoa 2 Đầu Sợi Chỉ Mảnh, Tăm
+                    Chỉ Nha Khoa Vệ Sinh Kẽ Răng Chân Nướu
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">7.999₫</p>
+                    <p class="today-product-card__sold">Đã bán 1000k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-21%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-30/main.webp"
+                    alt="Máy Xay Đa Năng Osaka Nhật Bản - Máy Xay Sinh Tố, Máy xay Thịt Cao Cấp-Lưỡi Dao Lớn Không Gỉ"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Máy
+                    Xay Đa Năng Osaka Nhật Bản - Máy Xay Sinh Tố, Máy xay Thịt
+                    Cao Cấp-Lưỡi Dao Lớn Không Gỉ
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">94.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 40k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-40%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-31/main.webp"
+                    alt="Tai Nghe Bluetooth5.0 Nhét Tai Pro4 Không Dây TWS Có Mic Cho Điện Thoại Gaming Stereo"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Tai
+                    Nghe Bluetooth5.0 Nhét Tai Pro4 Không Dây TWS Có Mic Cho
+                    Điện Thoại Gaming Stereo
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span
+                    ><span class="today-product-card__tag"
+                      >5?.??0₫ 25.3 lúc 00:00 Th03 25</span
+                    >
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">58.999₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-23%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-32/main.webp"
+                    alt="Máy duỗi tóc 7Days.Beautify 4 mức nhiệt điều chỉnh, giúp tóc thẳng mượt tự nhiên"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Máy
+                    duỗi tóc 7Days.Beautify 4 mức nhiệt điều chỉnh, giúp tóc
+                    thẳng mượt tự nhiên
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">93.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 30k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-33/main.webp"
+                    alt="Túi gà rừng mồi mái đáy tròn, 4 món phụ kiện chất lượng"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Túi
+                    gà rừng mồi mái đáy tròn, 4 món phụ kiện chất lượng
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">89.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 3k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-34/main.webp"
+                    alt="[ĐN] Rửa, in ảnh CÓ VIỀN TRẮNG 6x9 ảnh thật lấy ngay giá rẻ, in ảnh 6x9 theo yêu cầu"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>[ĐN]
+                    Rửa, in ảnh CÓ VIỀN TRẮNG 6x9 ảnh thật lấy ngay giá rẻ, in
+                    ảnh 6x9 theo yêu cầu
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">1.500₫</p>
+                    <p class="today-product-card__sold">Đã bán 100k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-29%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-35/main.webp"
+                    alt="combo bánh tráng phơi sương muối sặc sốt tắt"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>combo
+                    bánh tráng phơi sương muối sặc sốt tắt
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">17.800₫</p>
+                    <p class="today-product-card__sold">Đã bán 100k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-19%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-36/main.webp"
+                    alt="Dung dịch uống Đường Đua Xanh 10ml Lâm Bầu Xô – bổ sung trước và sau thi đấu cho chim cảnh, hỗ trợ phục hồi tăng thể lực"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Dung
+                    dịch uống Đường Đua Xanh 10ml Lâm Bầu Xô – bổ sung trước và
+                    sau thi đấu cho chim cảnh, hỗ trợ phục hồi tăng thể lực
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">85.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 590</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-41%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-37/main.webp"
+                    alt="Cơm Cháy Lắc Khô Gà Tiện Lợi 300gr MonMon Food - Đồ Ăn Vặt Hà Nội Đậm Đà"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Cơm
+                    Cháy Lắc Khô Gà Tiện Lợi 300gr MonMon Food - Đồ Ăn Vặt Hà
+                    Nội Đậm Đà
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">53.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 20k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-49%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-38/main.webp"
+                    alt="Kính cường lực iphone chống nhìn trộm KK 4D chống vân tay"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Kính
+                    cường lực iphone chống nhìn trộm KK 4D chống vân tay
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">15.210₫</p>
+                    <p class="today-product-card__sold">Đã bán 500k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-48%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-39/main.webp"
+                    alt="Gel Rửa Mặt Tẩy Tế Bào Chết Làm Sáng Da 50g· Loại bỏ mụn đầu đen, mụn trứng cá, bụi bẩn, dầu thừa"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Gel
+                    Rửa Mặt Tẩy Tế Bào Chết Làm Sáng Da 50g· Loại bỏ mụn đầu
+                    đen, mụn trứng cá, bụi bẩn, dầu thừa
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">33.491₫</p>
+                    <p class="today-product-card__sold">Đã bán 2k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-35%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-40/main.webp"
+                    alt="[ Thùng 700-500 Chiếc 5D + 10 Chiếc 9A ] Khẩu Trang 5D HẢI AN MASK, 3 Lớp Kháng Khuẩn, Chống Tia UV và Bụi Mịn"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>[
+                    Thùng 700-500 Chiếc 5D + 10 Chiếc 9A ] Khẩu Trang 5D HẢI AN
+                    MASK, 3 Lớp Kháng Khuẩn, Chống Tia UV và Bụi Mịn
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">130.500₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-30%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-41/main.webp"
+                    alt="Bông Tẩy Trang Lamer 201 Miếng 100% Cotton Siêu Mềm Phù Hợp Da Nhạy Cảm - Có Dây Zip, Combo 1 Gói, 2 Gói, 3 Gói"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Bông
+                    Tẩy Trang Lamer 201 Miếng 100% Cotton Siêu Mềm Phù Hợp Da
+                    Nhạy Cảm - Có Dây Zip, Combo 1 Gói, 2 Gói, 3 Gói
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">27.900₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-32%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-42/main.webp"
+                    alt="PVN62922 Lược Chải Tóc Đệm Khí Mát Xa Da Đầu Tạo Kiểu Tóc Xoăn Dài Đặc Biệt Cho Nữ Tiện Lợi T5"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span
+                    >PVN62922 Lược Chải Tóc Đệm Khí Mát Xa Da Đầu Tạo Kiểu Tóc
+                    Xoăn Dài Đặc Biệt Cho Nữ Tiện Lợi T5
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">13.622₫</p>
+                    <p class="today-product-card__sold">Đã bán 80k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-89%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-43/main.webp"
+                    alt="Tai nghe không dây X55 và J11 kết nối Bluetooth ổn định, tích hợp Microphone làm việc thuận tiện"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Tai
+                    nghe không dây X55 và J11 kết nối Bluetooth ổn định, tích
+                    hợp Microphone làm việc thuận tiện
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span
+                    ><span class="today-product-card__tag"
+                      >Giá dành riêng bạn mới</span
+                    >
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">9.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 10k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-46%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-44/main.webp"
+                    alt="Thắt lưng mặt xoay nam cao cấp thời trang, dây lưng da khóa tự động X003, Dây nịt Akedo"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Thắt
+                    lưng mặt xoay nam cao cấp thời trang, dây lưng da khóa tự
+                    động X003, Dây nịt Akedo
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Đang bán chạy</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">14.999₫</p>
+                    <p class="today-product-card__sold">Đã bán 70k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-39%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-45/main.webp"
+                    alt="Tương thích với băng Brother TZe 6/9/12/18/24mm Băng dán nhãn nhiều lớp Brother tze231 tze221 TZE Tape TZE-231 tương thích, dành cho Máy dán nhãn Ptouch Cho Máy In Nhãn Brother P-Touch PTH110"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Tương
+                    thích với băng Brother TZe 6/9/12/18/24mm Băng dán nhãn
+                    nhiều lớp Brother tze231 tze221 TZE Tape TZE-231 tương
+                    thích, dành cho Máy dán nhãn Ptouch Cho Máy In Nhãn Brother
+                    P-Touch PTH110
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">38.500₫</p>
+                    <p class="today-product-card__sold">Đã bán 30k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-39%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-46/main.webp"
+                    alt="Ốp Lật Cho Xiaomi Redmi 13 13C 12 12C 10C 10A 10 9T 9C 9A 9 A3 A2 A1 Plus A2 + A1 + Bao Da PU Ví Da TPU Ốp Lưng Có Khe Cắm Thẻ Đứng Dây Đeo Vỏ Điện Thoại"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Ốp
+                    Lật Cho Xiaomi Redmi 13 13C 12 12C 10C 10A 10 9T 9C 9A 9 A3
+                    A2 A1 Plus A2 + A1 + Bao Da PU Ví Da TPU Ốp Lưng Có Khe Cắm
+                    Thẻ Đứng Dây Đeo Vỏ Điện Thoại
+                  </p>
+                  <div class="today-product-card__tags">
+                    <span class="today-product-card__tag">Rẻ Vô Địch</span>
+                  </div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">59.292₫</p>
+                    <p class="today-product-card__sold">Đã bán 168</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <span class="today-product-card__discount">-26%</span>
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-47/main.webp"
+                    alt="Combo Bánh Tráng Phơi Sương Muối Tép Hành Phi + Hủ Bơ Lớn (250g bánh)"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Combo
+                    Bánh Tráng Phơi Sương Muối Tép Hành Phi + Hủ Bơ Lớn (250g
+                    bánh)
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">37.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 70k+</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+              <article class="today-product-card">
+                <div class="today-product-card__media">
+                  <img
+                    src="asset/img/today-suggest/product-48/main.webp"
+                    alt="Túi đựng tài liệu có khoá dành cho học sinh - sinh viên - văn phòng - HIKOMA STORE"
+                    loading="lazy"
+                  />
+                  <img
+                    class="today-product-card__overlay"
+                    src="asset/img/today-suggest/common/overlay.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <div class="today-product-card__body">
+                  <p class="today-product-card__title">
+                    <span class="today-product-card__fav">Yêu thích+</span>Túi
+                    đựng tài liệu có khoá dành cho học sinh - sinh viên - văn
+                    phòng - HIKOMA STORE
+                  </p>
+                  <div class="today-product-card__tags"></div>
+                  <div class="today-product-card__meta">
+                    <p class="today-product-card__price">10.000₫</p>
+                    <p class="today-product-card__sold">Đã bán 476</p>
+                  </div>
+                </div>
+                <a class="today-product-card__similar-link" href="#"
+                  >Tìm sản phẩm tương tự</a
+                >
+              </article>
+            </div>
+          </section>
 
-      <section
-        class="container promo-slider-section promo-slider-section--with-banner"
-        aria-label="Shopee Mall"
-      >
-        <div class="promo-section-header">
-          <div class="promo-header-left">
-            <h2>SHOPEE MALL</h2>
-            <ul class="promo-benefits" aria-label="Quyền lợi Shopee Mall">
-              <li>
-                <i class="bi bi-arrow-repeat"></i> Trả Hàng Miễn Phí 15 Ngày
-              </li>
-              <li><i class="bi bi-shield-check"></i> Hàng Chính Hãng 100%</li>
-              <li><i class="bi bi-truck"></i> Miễn Phí Vận Chuyển</li>
-            </ul>
-          </div>
-          <a href="#">Xem Tất Cả <i class="bi bi-chevron-right"></i></a>
-        </div>
-
-        <div class="promo-layout">
-          <a href="#" class="promo-banner" aria-label="Banner Shopee Mall">
-            <img
-              src="asset/img/promo-banner/promo-banner.jpg"
-              alt="Banner Shopee Mall"
-            />
+          <a
+            class="today-suggest-more-link"
+            href="https://shopee.vn/buyer/login"
+            aria-label="Xem thêm sản phẩm"
+          >
+            Login To See More
           </a>
 
-          <div class="promo-slider" data-per-view="8" data-step="8">
-            <button
-              class="promo-arrow prev"
-              type="button"
-              aria-label="Mục trước"
-            >
-              <i class="bi bi-chevron-left"></i>
-            </button>
+          <section
+            class="container shop-info-section"
+            aria-label="Thông tin Shopee"
+          >
+            <h3>SHOPEE - GÌ CŨNG CÓ, MUA HẾT Ở SHOPEE</h3>
+            <p>
+              Shopee - ứng dụng mua sắm trực tuyến thú vị, tin cậy, an toàn và
+              miễn phí! Shopee là nền tảng giao dịch trực tuyến hàng đầu ở Đông
+              Nam Á, có trụ sở chính ở Singapore, đã có mặt ở khắp các khu vực
+              <a href="#">Singapore</a>, <a href="#">Malaysia</a>,
+              <a href="#">Indonesia</a>, <a href="#">Thái Lan</a>,
+              <a href="#">Philippines</a>, <a href="#">Đài Loan</a>,
+              <a href="#">Brazil</a>, <a href="#">México</a>,
+              <a href="#">Colombia</a> và <a href="#">Chile</a>. Với sự đảm bảo
+              của Shopee, bạn sẽ mua hàng trực tuyến an tâm và nhanh chóng hơn
+              bao giờ hết!
+            </p>
 
-            <div class="promo-viewport">
-              <div class="promo-track">
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double1.webp"
-                    alt="Mall 1"
-                  />
-                  <p>Ưu đãi đến 50%</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double2.webp"
-                    alt="Mall 2"
-                  />
-                  <p>Mua 1 được 2</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double3.webp"
-                    alt="Mall 3"
-                  />
-                  <p>Mua 1 tặng 1</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double4.webp"
-                    alt="Mall 4"
-                  />
-                  <p>Mua là có quà</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double5.webp"
-                    alt="Mall 5"
-                  />
-                  <p>Thương hiệu chính hãng</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double6.webp"
-                    alt="Mall 6"
-                  />
-                  <p>Siêu voucher hôm nay</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double7.webp"
-                    alt="Mall 7"
-                  />
-                  <p>Giảm sốc cuối tuần</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double8.webp"
-                    alt="Mall 8"
-                  />
-                  <p>Ưu đãi có hạn</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double9.webp"
-                    alt="Mall 9"
-                  />
-                  <p>Mua 2 giảm thêm</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double10.webp"
-                    alt="Mall 10"
-                  />
-                  <p>Tặng quà chính hãng</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double11.webp"
-                    alt="Mall 11"
-                  />
-                  <p>Mua là freeship</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double12.webp"
-                    alt="Mall 12"
-                  />
-                  <p>Mua ngay giá hời</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double13.webp"
-                    alt="Mall 13"
-                  />
-                  <p>Hàng mới về</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double14.webp"
-                    alt="Mall 14"
-                  />
-                  <p>Giảm đến nửa giá</p>
-                </div>
-                <div class="promo-card promo-card--double">
-                  <img
-                    src="asset/img/promo-card promo-card--double/promo-card promo-card--double15.webp"
-                    alt="Mall 15"
-                  />
-                  <p>Deal theo khung giờ</p>
-                </div>
-                <div class="promo-card promo-card--double promo-card--view-all">
-                  <a
-                    href="#"
-                    class="promo-view-all-link"
-                    aria-label="Xem tất cả"
-                  >
-                    <span>Xem tất cả</span>
-                    <span class="promo-view-all-icon" aria-hidden="true">
-                      <i class="bi bi-chevron-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <h3>MUA SẮM VÀ BÁN HÀNG ONLINE ĐƠN GIẢN, NHANH CHÓNG VÀ AN TOÀN</h3>
+            <p>
+              Nếu bạn đang tìm kiếm một trang web để mua và bán hàng trực tuyến
+              thì Shopee.vn là sự lựa chọn tuyệt vời dành cho bạn. Shopee là
+              trang thương mại điện tử cho phép người mua và người bán tương tác
+              và trao đổi dễ dàng thông tin về sản phẩm và chương trình khuyến
+              mãi của shop. Do đó, việc mua bán trên Shopee trở nên nhanh chóng
+              và đơn giản hơn.
+            </p>
 
-            <button class="promo-arrow next" type="button" aria-label="Mục sau">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
+            <h3>
+              TẬN DỤNG ỨNG DỤNG SHOPEE NGAY ĐỂ MUA BÁN ONLINE MỌI LÚC, MỌI NƠI
+            </h3>
+            <p>
+              Ưu điểm của ứng dụng Shopee là cho phép bạn mua và bán hàng mọi
+              lúc, mọi nơi. Bạn có thể tải ứng dụng Shopee cũng như đăng sản
+              phẩm bán hàng một cách nhanh chóng và tiện lợi. Ngoài ra, ứng dụng
+              Shopee còn hỗ trợ theo dõi đơn hàng, giỏ hàng và thanh toán tiện
+              ích.
+            </p>
+
+            <h3>MUA HÀNG HIỆU CAO CẤP GIÁ TỐT TẠI SHOPEE</h3>
+            <p>
+              Bên cạnh Shopee Premium, Shopee còn có rất nhiều khuyến mãi thuộc
+              các ngành hàng khác nhau giúp bạn săn deal tốt mỗi ngày. Từ thời
+              trang, nhà cửa đời sống, làm đẹp, công nghệ cho đến mẹ và bé,
+              người dùng có thể mua sắm tiện lợi trên cùng một nền tảng.
+            </p>
+
+            <h3>MUA HÀNG CHÍNH HÃNG TỪ CÁC THƯƠNG HIỆU LỚN VỚI SHOPEE</h3>
+            <p>
+              Shopee Mall mang đến trải nghiệm mua sắm an tâm với nhiều thương
+              hiệu chính hãng cùng chính sách bảo vệ người mua. Nền tảng cũng
+              cung cấp các chương trình freeship, mã giảm giá và hỗ trợ thanh
+              toán linh hoạt để người dùng dễ dàng mua sắm mỗi ngày.
+            </p>
+
+            <h3>TOP THƯƠNG HIỆU NỔI BẬT</h3>
+            <p class="shop-info-section__links">
+              <a href="#">Biti's</a> | <a href="#">Oreo</a> |
+              <a href="#">Xiaomi</a> | <a href="#">Samsung</a> |
+              <a href="#">Nike</a> | <a href="#">Dior</a> |
+              <a href="#">Lock&Lock</a> | <a href="#">Vaseline</a> |
+              <a href="#">Simple</a> |
+              <a href="#">La Roche-Posay</a>
+            </p>
+
+            <h3>TỪ KHÓA XU HƯỚNG</h3>
+            <p>
+              áo ba lỗ | dép nữ | quạt cầm tay mini | đồ decor | tai nghe
+              bluetooth | bình giữ nhiệt | máy xay sinh tố mini | váy nữ |
+              sneaker nam | balo đi học | ốp lưng điện thoại
+            </p>
+
+            <h3>CÓ THỂ BẠN ĐANG TÌM KIẾM</h3>
+            <p>
+              áo thể thao | kính râm | dây sạc nhanh | nồi chiên không dầu | bàn
+              học gấp gọn | đèn ngủ để bàn | máy hút bụi mini | giày chạy bộ |
+              máy lọc không khí | chuột không dây
+            </p>
+          </section>
         </div>
-      </section>
-
-      <section
-        class="container promo-slider-section"
-        aria-label="Tìm kiếm hàng đầu"
-      >
-        <div class="promo-section-header">
-          <h2>TÌM KIẾM HÀNG ĐẦU</h2>
-          <a href="#">Xem Tất Cả <i class="bi bi-chevron-right"></i></a>
-        </div>
-
-        <div class="promo-slider" data-per-view="6" data-step="6">
-          <button class="promo-arrow prev" type="button" aria-label="Mục trước">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-
-          <div class="promo-viewport">
-            <div class="promo-track">
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single1.jpg"
-                  alt="Top 1"
-                />
-                <p>Áo Ngực Không Dây</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single2.jpg"
-                  alt="Top 2"
-                />
-                <p>Bao Cao Su</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single3.jpg"
-                  alt="Top 3"
-                />
-                <p>Áo Thun</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single4.jpg"
-                  alt="Top 4"
-                />
-                <p>Áo Lót Nữ Không Gọng</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single5.jpg"
-                  alt="Top 5"
-                />
-                <p>Bút Mực Gel</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single6.jpg"
-                  alt="Top 6"
-                />
-                <p>Bánh Tráng Trộn</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single7.jpg"
-                  alt="Top 7"
-                />
-                <p>Áo Babydoll Nữ Tay Bèo</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single8.jpg"
-                  alt="Top 8"
-                />
-                <p>Quần Lót Nữ Cotton</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single9.jpg"
-                  alt="Top 9"
-                />
-                <p>Dép Đi Trong Nhà</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single10.jpg"
-                  alt="Top 10"
-                />
-                <p>Son Kem Lì Mịn Môi Romand</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single11.jpg"
-                  alt="Top 11"
-                />
-                <p>Ô Dù</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single12.jpg"
-                  alt="Top 12"
-                />
-                <p>Bộ Chăn Ga Gối Cotton</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single13.jpg"
-                  alt="Top 13"
-                />
-                <p>Quần Lót Nam Co Dãn</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single14.jpg"
-                  alt="Top 14"
-                />
-                <p>Áo Thun Polo Nam Ngắn Tay</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single15.jpg"
-                  alt="Top 15"
-                />
-                <p>Dầu Gội Nguyên Xuân</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single16.jpg"
-                  alt="Top 16"
-                />
-                <p>Quần Ống Rộng</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single17.jpg"
-                  alt="Top 17"
-                />
-                <p>Nước Giặt Xả Maxkleen</p>
-              </div>
-              <div class="promo-card promo-card--single">
-                <img
-                  src="asset/img/promo-card promo-card--single/promo-card promo-card--single18.jpg"
-                  alt="Top 18"
-                />
-                <p>Quần Ống Rộng Nữ</p>
-              </div>
-            </div>
-          </div>
-
-          <button class="promo-arrow next" type="button" aria-label="Mục sau">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-      </section>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 Shoppe. All rights reserved.</p>
+    <footer class="site-footer" aria-label="Thông tin cuối trang">
+      <div class="container site-footer__top">
+        <section class="site-footer__col">
+          <h4>DỊCH VỤ KHÁCH HÀNG</h4>
+          <ul>
+            <li><a href="#">Trung Tâm Trợ Giúp Shopee</a></li>
+            <li><a href="#">Shopee Blog</a></li>
+            <li><a href="#">Shopee Mall</a></li>
+            <li><a href="#">Hướng Dẫn Mua Hàng/Đặt Hàng</a></li>
+            <li><a href="#">Hướng Dẫn Bán Hàng</a></li>
+            <li><a href="#">Ví ShopeePay</a></li>
+            <li><a href="#">Shopee Xu</a></li>
+            <li><a href="#">Đơn Hàng</a></li>
+            <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+            <li><a href="#">Liên Hệ Shopee</a></li>
+            <li><a href="#">Chính Sách Bảo Hành</a></li>
+          </ul>
+        </section>
+
+        <section class="site-footer__col">
+          <h4>SHOPEE VIỆT NAM</h4>
+          <ul>
+            <li><a href="#">Về Shopee</a></li>
+            <li><a href="#">Tuyển Dụng</a></li>
+            <li><a href="#">Điều Khoản Shopee</a></li>
+            <li><a href="#">Chính Sách Bảo Mật</a></li>
+            <li><a href="#">Shopee Mall</a></li>
+            <li><a href="#">Kênh Người Bán</a></li>
+            <li><a href="#">Flash Sale</a></li>
+            <li><a href="#">Tiếp Thị Liên Kết</a></li>
+            <li><a href="#">Liên Hệ Truyền Thông</a></li>
+          </ul>
+        </section>
+
+        <section class="site-footer__col site-footer__col--payments">
+          <h4>THANH TOÁN</h4>
+          <div class="site-footer__badges">
+            <img
+              src="asset/img/card/0217f1d345587aa0a300e69e2195c492.png"
+              alt="VISA"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/2c46b83d84111ddc32cfd3b5995d9281.png"
+              alt="Mastercard"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/9263fa8c83628f5deff55e2a90758b06.png"
+              alt="JCB"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/5e3f0bee86058637ff23cfdf2e14ca09.png"
+              alt="AMEX"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/38fd98e55806c3b2e4535c4e4a6c4c08.png"
+              alt="COD"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/bc2a874caeee705449c164be385b796c.png"
+              alt="Trả góp"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/a0a9062ebe19b45c1ae0506f16af5c16.png"
+              alt="SPay"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/card/d4bbea4570b93bfd5fc652ca82a262a8.png"
+              alt="SPayLater"
+              loading="lazy"
+            />
+          </div>
+
+          <h4>ĐƠN VỊ VẬN CHUYỂN</h4>
+          <div class="site-footer__badges">
+            <img
+              src="asset/img/shipping/3900aefbf52b1c180ba66e5ec91190e5.png"
+              alt="SPX"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/0d349e22ca8d4337d11c9b134cf9fe63.png"
+              alt="GHTK"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/0b3014da32de48c03340a4e4154328f6.png"
+              alt="Viettel Post"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/6e3be504f08f88a15a28a9a447d94d3d.png"
+              alt="VNPost"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/59270fb2f3fbb7cbc92fca3877edde3f.png"
+              alt="J&amp;T"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/957f4eec32b963115f952835c779cd2c.png"
+              alt="GrabExpress"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/vn-11134258-7ras8-m20rc1wk8926cf.png"
+              alt="Ninja Van"
+              loading="lazy"
+            />
+            <img
+              src="asset/img/shipping/vn-50009109-64f0b242486a67a3d29fd4bcf024a8c6.png"
+              alt="Ahamove"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <section class="site-footer__col">
+          <h4>THEO DÕI SHOPEE</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="bi bi-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="site-footer__col">
+          <h4>TẢI ỨNG DỤNG SHOPEE</h4>
+          <div class="site-footer__app">
+            <div class="site-footer__qr" aria-hidden="true">
+              <i class="bi bi-qr-code"></i>
+            </div>
+            <div class="site-footer__stores">
+              <a href="#"><i class="bi bi-apple"></i> App Store</a>
+              <a href="#"><i class="bi bi-google-play"></i> Google Play</a>
+              <a href="#"><i class="bi bi-phone"></i> AppGallery</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container site-footer__mid">
+        <p>© 2026 Shopee. Tất cả các quyền được bảo lưu.</p>
+        <p>
+          Quốc gia &amp; Khu vực: Argentina | Singapore | Indonesia | Thái Lan |
+          Malaysia | Việt Nam | Philippines | Brazil | México | Đài Loan
+        </p>
+      </div>
+
+      <div class="container site-footer__bottom">
+        <nav class="site-footer__policy-links" aria-label="Chính sách">
+          <a href="#">CHÍNH SÁCH BẢO MẬT</a>
+          <a href="#">QUY CHẾ HOẠT ĐỘNG</a>
+          <a href="#">CHÍNH SÁCH VẬN CHUYỂN</a>
+          <a href="#">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+        </nav>
+        <div class="site-footer__certs" aria-label="Chứng nhận">
+          <span>ĐÃ ĐĂNG KÝ</span>
+          <span>ĐÃ ĐĂNG KÝ</span>
+          <span class="site-footer__cert--circle">BỘ CT</span>
+        </div>
+        <p>Công ty TNHH Shopee</p>
+        <p>
+          Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai,
+          Phường Ngọc Hà, Thành phố Hà Nội, Việt Nam
+        </p>
+        <p>
+          Chăm sóc khách hàng: Gọi tổng đài Shopee (miễn phí) hoặc Trò chuyện
+          với Shopee ngay trên Trung tâm trợ giúp
+        </p>
+        <p>Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Bùi Anh Tuấn</p>
+        <p>
+          Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch và Đầu tư TP Hà Nội cấp
+          lần đầu ngày 10/02/2015
+        </p>
+        <p>© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
       </div>
     </footer>
+
+    <div class="ads-modal" id="adsModal" aria-hidden="true">
+      <div class="ads-modal__overlay" data-modal-close="true"></div>
+      <div
+        class="ads-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Quảng cáo khuyến mãi"
+      >
+        <button
+          type="button"
+          class="ads-modal__close"
+          aria-label="Đóng quảng cáo"
+          data-modal-close="true"
+        >
+          <i class="bi bi-x"></i>
+        </button>
+        <a href="#" class="ads-modal__image-link" aria-label="Ưu đãi hôm nay">
+          <img
+            src="asset/img/adsone/ads222.webp"
+            alt="Ưu đãi sản phẩm hôm nay"
+          />
+        </a>
+      </div>
+    </div>
+
     <script src="asset/js/main.js"></script>
   </body>
 </html>

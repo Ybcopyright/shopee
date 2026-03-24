@@ -1,4 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const adsModal = document.querySelector("#adsModal");
+  if (!adsModal) return;
+
+  const closeTriggers = adsModal.querySelectorAll("[data-modal-close='true']");
+
+  const closeAdsModal = () => {
+    adsModal.classList.remove("is-open");
+    adsModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-modal-open");
+  };
+
+  const openAdsModal = () => {
+    adsModal.classList.add("is-open");
+    adsModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-modal-open");
+  };
+
+  closeTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", closeAdsModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeAdsModal();
+    }
+  });
+
+  openAdsModal();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const topRight = document.querySelector(".top-right");
   const notifyMenu = document.querySelector(".notify-menu");
   const notifyPanel = notifyMenu?.querySelector(".notify-panel");
