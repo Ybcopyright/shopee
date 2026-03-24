@@ -202,40 +202,57 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!track || !sourceGrid || !prevButton || !nextButton) return;
 
   const cards = Array.from(sourceGrid.querySelectorAll(".category-card"));
-  const cardsPerPage = 20;
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
-
-  const pagesFragment = document.createDocumentFragment();
-
-  for (let pageIndex = 0; pageIndex < totalPages; pageIndex += 1) {
-    const page = document.createElement("div");
-    page.className = "category-page";
-
-    const pageGrid = document.createElement("div");
-    pageGrid.className = "category-page-grid";
-
-    const start = pageIndex * cardsPerPage;
-    const end = start + cardsPerPage;
-    const chunk = cards.slice(start, end);
-
-    chunk.forEach((card) => {
-      pageGrid.appendChild(card);
-    });
-
-    for (let index = chunk.length; index < cardsPerPage; index += 1) {
-      const placeholder = document.createElement("div");
-      placeholder.className = "category-card category-card--placeholder";
-      placeholder.setAttribute("aria-hidden", "true");
-      pageGrid.appendChild(placeholder);
-    }
-
-    page.appendChild(pageGrid);
-    pagesFragment.appendChild(page);
-  }
-
-  track.replaceChildren(pagesFragment);
+  let cardsPerPage = 20;
+  let totalPages = 1;
 
   let activePage = 0;
+
+  const getCardsPerPage = () => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    return isMobile ? 8 : 20;
+  };
+
+  const buildPages = () => {
+    const nextCardsPerPage = getCardsPerPage();
+
+    if (nextCardsPerPage === cardsPerPage && track.children.length > 0) {
+      return;
+    }
+
+    cardsPerPage = nextCardsPerPage;
+    totalPages = Math.max(1, Math.ceil(cards.length / cardsPerPage));
+
+    const pagesFragment = document.createDocumentFragment();
+
+    for (let pageIndex = 0; pageIndex < totalPages; pageIndex += 1) {
+      const page = document.createElement("div");
+      page.className = "category-page";
+
+      const pageGrid = document.createElement("div");
+      pageGrid.className = "category-page-grid";
+
+      const start = pageIndex * cardsPerPage;
+      const end = start + cardsPerPage;
+      const chunk = cards.slice(start, end);
+
+      chunk.forEach((card) => {
+        pageGrid.appendChild(card);
+      });
+
+      for (let index = chunk.length; index < cardsPerPage; index += 1) {
+        const placeholder = document.createElement("div");
+        placeholder.className = "category-card category-card--placeholder";
+        placeholder.setAttribute("aria-hidden", "true");
+        pageGrid.appendChild(placeholder);
+      }
+
+      page.appendChild(pageGrid);
+      pagesFragment.appendChild(page);
+    }
+
+    track.replaceChildren(pagesFragment);
+    activePage = Math.max(0, Math.min(activePage, totalPages - 1));
+  };
 
   const updateArrows = () => {
     prevButton.classList.toggle("is-disabled", activePage === 0);
@@ -256,9 +273,24 @@ document.addEventListener("DOMContentLoaded", () => {
     goToPage(activePage + 1);
   });
 
+  window.addEventListener("resize", () => {
+    const oldPages = totalPages;
+    buildPages();
+    if (oldPages !== totalPages) {
+      goToPage(activePage);
+    } else {
+      updateArrows();
+    }
+  });
+
+  buildPages();
+
   if (totalPages <= 1) {
     prevButton.classList.add("is-hidden");
     nextButton.classList.add("is-hidden");
+  } else {
+    prevButton.classList.remove("is-hidden");
+    nextButton.classList.remove("is-hidden");
   }
 
   goToPage(0);
@@ -333,17 +365,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!viewport || !track || cards.length === 0 || !prevButton || !nextButton) {
     return;
   }
-  const jumpCount = 6;
-
-  const applyEdgeGap = () => {
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const viewportWidth = viewport.clientWidth;
-    const calculatedGap =
-      (viewportWidth - cardWidth * jumpCount) / Math.max(1, jumpCount - 1);
-    const safeGap = Math.max(8, calculatedGap);
-    track.style.columnGap = `${safeGap}px`;
-  };
-
   const getMetrics = () => {
     const cardWidth = cards[0].getBoundingClientRect().width;
     const styles = window.getComputedStyle(track);
@@ -363,6 +384,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return Math.max(1, Math.floor((viewportWidth + gap) / step));
   };
 
+  const getJumpCount = () => Math.max(1, getVisibleCount());
+
   let activeIndex = 0;
 
   const updateArrows = () => {
@@ -379,11 +402,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const next = () => {
-    goTo(activeIndex + jumpCount);
+    goTo(activeIndex + getJumpCount());
   };
 
   const prev = () => {
-    goTo(activeIndex - jumpCount);
+    goTo(activeIndex - getJumpCount());
   };
 
   prevButton.addEventListener("click", () => {
@@ -395,11 +418,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("resize", () => {
-    applyEdgeGap();
     goTo(activeIndex);
   });
 
-  applyEdgeGap();
   goTo(0);
 });
 
@@ -418,26 +439,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = Array.from(track.querySelectorAll(".promo-card"));
     if (cards.length === 0) return;
 
-    const perView = Number.parseInt(slider.dataset.perView || "6", 10);
-    const cardsPerPage = Number.isFinite(perView) && perView > 0 ? perView : 6;
-    const totalPages = Math.ceil(cards.length / cardsPerPage);
+    const basePerView = Number.parseInt(slider.dataset.perView || "6", 10);
+    const desktopPerView =
+      Number.isFinite(basePerView) && basePerView > 0 ? basePerView : 6;
 
-    const pagesFragment = document.createDocumentFragment();
-
-    for (let pageIndex = 0; pageIndex < totalPages; pageIndex += 1) {
-      const page = document.createElement("div");
-      page.className = "promo-page";
-
-      const start = pageIndex * cardsPerPage;
-      const chunk = cards.slice(start, start + cardsPerPage);
-      chunk.forEach((card) => page.appendChild(card));
-
-      pagesFragment.appendChild(page);
-    }
-
-    track.replaceChildren(pagesFragment);
-
+    let totalPages = 1;
+    let cardsPerPage = 0;
     let activePage = 0;
+
+    const buildPages = () => {
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const nextCardsPerPage = isMobile ? 4 : desktopPerView;
+
+      if (nextCardsPerPage === cardsPerPage && track.children.length > 0) {
+        return;
+      }
+
+      cardsPerPage = nextCardsPerPage;
+      totalPages = Math.max(1, Math.ceil(cards.length / cardsPerPage));
+
+      const pagesFragment = document.createDocumentFragment();
+
+      for (let pageIndex = 0; pageIndex < totalPages; pageIndex += 1) {
+        const page = document.createElement("div");
+        page.className = "promo-page";
+
+        const start = pageIndex * cardsPerPage;
+        const chunk = cards.slice(start, start + cardsPerPage);
+        chunk.forEach((card) => page.appendChild(card));
+
+        for (let index = chunk.length; index < cardsPerPage; index += 1) {
+          const placeholder = document.createElement("div");
+          placeholder.className = "promo-card promo-card--placeholder";
+          placeholder.setAttribute("aria-hidden", "true");
+          page.appendChild(placeholder);
+        }
+
+        pagesFragment.appendChild(page);
+      }
+
+      track.replaceChildren(pagesFragment);
+      activePage = Math.max(0, Math.min(activePage, totalPages - 1));
+    };
 
     const updateArrows = () => {
       prevButton.classList.toggle("is-disabled", activePage <= 0);
@@ -458,11 +501,15 @@ document.addEventListener("DOMContentLoaded", () => {
       goToPage(activePage + 1);
     });
 
-    if (totalPages <= 1) {
-      prevButton.classList.add("is-disabled");
-      nextButton.classList.add("is-disabled");
-    }
+    window.addEventListener("resize", () => {
+      const oldPages = totalPages;
+      buildPages();
+      if (oldPages !== totalPages) {
+        goToPage(activePage);
+      }
+    });
 
+    buildPages();
     goToPage(0);
   });
 });

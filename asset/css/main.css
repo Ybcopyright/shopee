@@ -512,12 +512,30 @@ body {
 
 .cart {
   font-size: 30px;
-  justify-self: end;
   display: inline-flex;
   align-items: center;
   transform: translateY(-2px);
-  margin-left: 0;
+  margin: 0;
+}
+
+.header-actions {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
   margin-right: 50px;
+}
+
+.header-actions a {
+  color: inherit;
+}
+
+.header-account {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
 }
 
 .home-hero {
@@ -1214,6 +1232,11 @@ body {
   display: grid;
   gap: 8px;
   align-content: start;
+}
+
+.promo-card--placeholder {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .promo-card img {
